@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <title>Music Library UI Only</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {background:#141619;color:#e8eef1;font-family:Inter,sans-serif;margin:0;}
+    .header {display:flex;align-items:center;justify-content:space-between;padding:18px 28px 8px;}
+    .brand {display:flex;align-items:center;gap:10px;color:#1db954;font-weight:700;}
+    .logo {width:34px;height:34px;background:#1db954;border-radius:8px;display:grid;place-items:center;color:#fff;font-weight:700;}
+    .controls {display:flex;gap:10px;align-items:center;}
+    .icon-btn {background:#23262a;border:none;border-radius:8px;width:38px;height:38px;display:grid;place-items:center;color:#e8eef1;}
+    .badge {background:rgba(255,255,255,0.05);padding:5px 10px;border-radius:999px;color:#9aa0a6;font-size:12px;}
+    .main {max-width:900px;margin:0 auto;padding:18px;}
+    .searchbar {display:flex;align-items:center;gap:10px;background:#23262a;padding:10px;border-radius:999px;max-width:430px;}
+    .searchbar input {border:none;background:transparent;color:#e8eef1;width:100%;font-size:16px;outline:0;}
+    .tabs {display:flex;gap:8px;margin:18px 0 13px;}
+    .tab {padding:7px 14px;border-radius:999px;background:transparent;border:1px solid rgba(255,255,255,0.07);color:#9aa0a6;cursor:pointer;font-size:12px;}
+    .tab.active {background:rgba(255,255,255,0.04);color:#e8eef1;border-color:#1db954;}
+    .grid {display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:15px;}
+    .card {background:#23262a;border-radius:10px;box-shadow:0 4px 14px #0002;}
+    .cover {width:100%;height:140px;object-fit:cover;border-radius:10px 10px 0 0;}
+    .card-body {padding:10px;}
+    .song {font-weight:600;font-size:1em;}
+    .artist {color:#9aa0a6;font-size:.98em;margin-bottom:6px;}
+    .card-row {display:flex;gap:7px;}
+    .btn {background:none;border:0;color:#e8eef1;border-radius:8px;padding:5px 8px;cursor:pointer;}
+    .btn i {font-size:15px;}
+    .lyrics-ind {color:#1db954;margin-left:auto;}
+    @media(max-width:600px){.main{padding:8px}.header{padding:12px 8px 4px}.cover{height:90px;}}
+  </style>
+</head>
+<body>
+  <nav class="header">
+    <div class="brand">
+      <span class="logo">CS</span>
+      <span>CSpotify</span>
+    </div>
+    <div class="controls">
+      <span class="badge">2 favorites</span>
+      <button class="icon-btn" title="Theme"><i class="fa-solid fa-moon"></i></button>
+      <button class="icon-btn" title="Upload"><i class="fa-solid fa-cloud-arrow-up"></i></button>
+    </div>
+  </nav>
+  <main class="main">
+    <div class="searchbar">
+      <i class="fa-solid fa-magnifying-glass" style="color:#9aa0a6"></i>
+      <input placeholder="Search artist, album, song..." disabled>
+    </div>
+    <div class="tabs">
+      <button class="tab active">Home</button>
+      <button class="tab">Favorites</button>
+    </div>
+    <div class="grid">
+      <!-- CARD 1 -->
+      <div class="card">
+        <img class="cover" src="YOUR_IMAGE1.jpg" alt="Album 1">
+        <div class="card-body">
+          <div class="song">Gravity</div>
+          <div class="artist">John Mayer</div>
+          <div class="card-row">
+            <button class="btn"><i class="fa-solid fa-play"></i></button>
+            <button class="btn"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn"><i class="fa-solid fa-file-lines"></i></button>
+            <button class="btn"><i class="fa-solid fa-trash-can"></i></button>
+            <span class="lyrics-ind"><i class="fa-solid fa-file-lines"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 2 -->
+      <div class="card">
+        <img class="cover" src="YOUR_IMAGE2.jpg" alt="Album 2">
+        <div class="card-body">
+          <div class="song">Yellow</div>
+          <div class="artist">Coldplay</div>
+          <div class="card-row">
+            <button class="btn"><i class="fa-solid fa-play"></i></button>
+            <button class="btn"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn"><i class="fa-solid fa-file-lines"></i></button>
+            <button class="btn"><i class="fa-solid fa-trash-can"></i></button>
+            <span class="lyrics-ind"><i class="fa-solid fa-file-lines"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- CARD 3 -->
+      <div class="card">
+        <img class="cover" src="YOUR_IMAGE3.jpg" alt="Album 3">
+        <div class="card-body">
+          <div class="song">All Star</div>
+          <div class="artist">Smash Mouth</div>
+          <div class="card-row">
+            <button class="btn"><i class="fa-solid fa-play"></i></button>
+            <button class="btn"><i class="fa-solid fa-heart"></i></button>
+            <button class="btn"><i class="fa-solid fa-file-lines"></i></button>
+            <button class="btn"><i class="fa-solid fa-trash-can"></i></button>
+            <span class="lyrics-ind" style="opacity:.35"><i class="fa-solid fa-file-lines"></i></span>
+          </div>
+        </div>
+      </div>
+      <!-- More cards ... -->
+    </div>
+  </main>
+</body>
+</html>
